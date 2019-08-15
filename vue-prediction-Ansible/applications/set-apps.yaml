@@ -1,0 +1,190 @@
+#This file is developed by Team 11 of COMP90024 of The University of Melbourne, under Apache Licence(see LICENCE).
+#Researched Cities: Victoria, AU
+#Team member - id:
+#Zhijia Lu         921715
+#Jing Du           775074
+#Chenyang Lu       951933
+#Pengcheng Yao     886326
+#Echo Gu           520042
+
+- hosts: CouchDB_master
+  gather_facts: false
+
+  roles:
+    - dbsetup
+    - crawler1
+    - analyzer1
+  
+- hosts: CouchDB_slave1
+  gather_facts: false
+
+  roles:
+    - crawler2
+    - analyzer2
+
+- hosts: CouchDB_slave2
+  gather_facts: false
+
+  roles:
+    - crawler3
+    - analyzer3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#   tasks:
+
+#     - name: mkdir the /opt/workspace/master/data
+#       file:
+#         path: "{{ item }}"
+#         state: directory
+#         owner: ubuntu
+#         group: ubuntu
+#       with_items:
+#         - /opt/workspace/master/data
+
+#     - name: copy the docker-compose
+#       copy:
+#         src: /home/andy/comp90024/Ansible/couchdb/docker-compose-m.yml
+#         dest: /opt/workspace/master/docker-compose.yml
+
+#     - name: run CouchDB_master
+#       raw: cd /opt/workspace/master/; docker-compose up -d
+
+# ###################################################################################
+
+#     - name: git code
+#       git:
+#         repo: 'https://zhijial@bitbucket.org/zhijial/analyzer.git'
+#         dest: /opt/workspace/master/
+#         clone: yes
+
+#     - name: cd /opt/workspace/master/
+#       raw: cd /opt/workspace/master/luxury-goods-map-server
+
+#     - name: build harvest1 container
+#       raw: docker build -t harvest1 yaopc817/team11_service1:2.0.0 .
+
+#     - name: run harvest1 container
+#       raw: docker run -d -v /opt/workspace/master/analyzer:/usr/src/app -t service1
+
+
+#####################################
+
+# - hosts: CouchDB_slave1
+#   gather_facts: false
+
+#   tasks:
+
+#     - name: mkdir the /opt/workspace/slave/data
+#       become: true
+#       file:
+#         path: "{{ item }}"
+#         state: directory
+#         owner: ubuntu
+#         group: ubuntu
+#       with_items:
+#         - /opt/workspace/slave/data
+
+#     - name: copy the docker-compose
+#       become: true
+#       copy:
+#         src: /home/andy/comp90024/Ansible/couchdb/docker-compose-s1.yml
+#         dest: /opt/workspace/slave/docker-compose.yml
+
+#     - name: run CouchDB_master
+#       raw: cd /opt/workspace/slave/; docker-compose up -d
+
+#     - name: copy the cluster.sh
+#       become: true
+#       copy:
+#         src: /home/andy/comp90024/Ansible/couchdb/cluster2.sh
+#         dest: /opt/workspace/slave/cluster.sh
+
+#     - name: run cluster.sh
+#       raw: sudo ./cluster.sh
+
+# ###################################################################################
+
+#     - name: git code
+#       git:
+#         repo: 'https://zhijial@bitbucket.org/zhijial/luxury-goods-map-server.git'
+#         dest: /opt/workspace/slave/
+#         clone: yes
+
+#     - name: cd /opt/workspace/slave/
+#       raw: cd /opt/workspace/slave/luxury-goods-map-server
+
+#     - name: run service2 container
+#       raw: docker run -d -v /opt/workspace/slave/luxury-goods-map-server:/usr/src/app -t service2
+
+################################################
+
+# - hosts: CouchDB_slave2
+#   gather_facts: false
+
+#   tasks:
+
+#     - name: mkdir the /opt/workspace/slave/data
+#       become: true
+#       file:
+#         path: "{{ item }}"
+#         state: directory
+#         owner: ubuntu
+#         group: ubuntu
+#       with_items:
+#         - /opt/workspace/slave/data
+
+#     - name: copy the docker-compose
+#       become: true
+#       copy:
+#         src: /home/andy/comp90024/Ansible/couchdb/docker-compose-s2.yml
+#         dest: /opt/workspace/slave/docker-compose.yml
+
+#     - name: run CouchDB_master
+#       raw: cd /opt/workspace/slave/; docker-compose up -d
+
+#     - name: copy the cluster.sh
+#       become: true
+#       copy:
+#         src: /home/andy/comp90024/Ansible/couchdb/cluster2.sh
+#         dest: /opt/workspace/slave/cluster.sh
+
+#     - name: run cluster.sh
+#       raw: sudo ./cluster.sh
+
+# ###################################################################################
+
+#     - name: git code
+#       git:
+#         repo: 'https://zhijial@bitbucket.org/zhijial/luxury-goods-map-server.git'
+#         dest: /opt/workspace/slave/
+#         clone: yes
+
+#     - name: cd /opt/workspace/slave/
+#       raw: cd /opt/workspace/slave/luxury-goods-map-server
+
+#     - name: build service3 container
+#       raw: docker build -t backend yaopc817/team11_service3:2.0.0 .
+
+#     - name: run service3 container
+#       raw: docker run -d -v /opt/workspace/slave/luxury-goods-map-server:/usr/src/app -t service3

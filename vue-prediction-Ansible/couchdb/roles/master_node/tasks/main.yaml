@@ -1,0 +1,24 @@
+#This file is developed by Team 11 of COMP90024 of The University of Melbourne, under Apache Licence(see LICENCE).
+#Researched Cities: Victoria, AU
+#Team member - id:
+#Zhijia Lu         921715
+#Jing Du           775074
+#Chenyang Lu       951933
+#Pengcheng Yao     886326
+#Echo Gu           520042
+
+- name: mkdir the /opt/workspace/master/data
+  file:
+    path: /home/ubuntu/couchdb/master/data
+    state: directory
+    owner: ubuntu
+    group: ubuntu
+    #   /opt/workspace/master/data
+
+- name: copy the docker-compose
+  copy:
+    src: /home/andy/comp90024/Ansible/couchdb/docker-compose-m.yml
+    dest: /home/ubuntu/couchdb/master/docker-compose.yml
+
+- name: run CouchDB_master
+  raw: cd /home/ubuntu/couchdb/master/; docker-compose up -d

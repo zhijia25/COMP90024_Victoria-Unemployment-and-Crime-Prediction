@@ -1,0 +1,95 @@
+#This file is developed by Team 11 of COMP90024 of The University of Melbourne, under Apache Licence(see LICENCE).
+#Researched Cities: Victoria, AU
+#Team member - id:
+#Zhijia Lu         921715
+#Jing Du           775074
+#Chenyang Lu       951933
+#Pengcheng Yao     886326
+#Echo Gu           520042
+
+
+# Create Instances
+- name: Create an instance
+  os_server:
+    name: CouchDB1
+    availability_zone: melbourne-qh2-uom
+    image: afccf48a-9426-4618-86dc-0ceb636f0169
+    key_name: team11
+    flavor: uom.general.1c4g
+    network: qh2-uom-internal
+    security_groups: '{{ sg_name }}'
+    volumes: CouchDB1
+    auto_floating_ip: yes
+    wait: yes
+    timeout: 600
+    state: present
+
+  register: os_instance1
+
+- debug:
+    msg: "Instance CouchDB1 has been created. IP address is {{ os_instance1.openstack.public_v4 }}"
+  when: os_instance1.openstack is defined
+
+- name: Create an instance
+  os_server:
+    name: CouchDB2
+    availability_zone: melbourne-qh2-uom
+    image: afccf48a-9426-4618-86dc-0ceb636f0169
+    key_name: team11
+    flavor: uom.general.1c4g
+    network: qh2-uom-internal
+    security_groups: '{{ sg_name }}'
+    volumes: CouchDB2
+    auto_floating_ip: yes
+    wait: yes
+    timeout: 600
+    state: present
+
+  register: os_instance2
+
+- debug:
+    msg: "Instance CouchDB2 has been created. IP address is {{ os_instance2.openstack.public_v4 }}"
+  when: os_instance2.openstack is defined
+
+- name: Create an instance
+  os_server:
+    name: CouchDB3
+    availability_zone: melbourne-qh2-uom
+    image: afccf48a-9426-4618-86dc-0ceb636f0169
+    key_name: team11
+    flavor: uom.mse.2c9g
+    network: qh2-uom-internal
+    security_groups: '{{ sg_name }}'
+    volumes: CouchDB3
+    auto_floating_ip: yes
+    wait: yes
+    timeout: 600
+    state: present
+
+  register: os_instance3
+
+- debug:
+    msg: "Instance CouchDB3 has been created. IP address is {{ os_instance3.openstack.public_v4 }}"
+  when: os_instance3.openstack is defined
+
+
+- name: Create an instance
+  os_server:
+    name: Website
+    availability_zone: melbourne-qh2-uom
+    image: afccf48a-9426-4618-86dc-0ceb636f0169
+    key_name: team11
+    flavor: uom.mse.2c9g
+    network: qh2-uom-internal
+    security_groups: '{{ sg_name }}'
+    volumes: Website
+    auto_floating_ip: yes
+    wait: yes
+    timeout: 600
+    state: present
+
+  register: os_instance4
+
+- debug:
+    msg: "Instance Website has been created. IP address is {{ os_instance4.openstack.public_v4 }}"
+  when: os_instance4.openstack is defined

@@ -1,0 +1,23 @@
+#This file is developed by Team 11 of COMP90024 of The University of Melbourne, under Apache Licence(see LICENCE).
+#Researched Cities: Victoria, AU
+#Team member - id:
+#Zhijia Lu         921715
+#Jing Du           775074
+#Chenyang Lu       951933
+#Pengcheng Yao     886326
+#Echo Gu           520042
+
+- name: mkdir repo
+  raw: mkdir -p /opt/workspace/analyzer3
+
+- name: git code
+  git:
+    repo: 'https://zhijial@bitbucket.org/zhijial/vuc-prediction-analyzer3_final.git'
+    dest: /opt/workspace/analyzer3
+    clone: yes
+
+- name: build analyzer3 container
+  raw: /opt/workspace/analyzer3; docker build -t analyzer3 .; sleep 5
+
+- name: run analyzer3 container
+  raw: run -d --net=host analyzer3

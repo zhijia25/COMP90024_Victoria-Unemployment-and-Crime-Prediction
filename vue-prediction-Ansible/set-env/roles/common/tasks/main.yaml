@@ -1,0 +1,42 @@
+#This file is developed by Team 11 of COMP90024 of The University of Melbourne, under Apache Licence(see LICENCE).
+#Researched Cities: Victoria, AU
+#Team member - id:
+#Zhijia Lu         921715
+#Jing Du           775074
+#Chenyang Lu       951933
+#Pengcheng Yao     886326
+#Echo Gu           520042
+
+- name: Install git
+  become: yes
+  apt:
+    name: ['git']
+    update_cache: yes
+    state: latest
+
+- name: Install dependencies
+  tags: always
+  become: yes
+  apt: 
+    name: ['apt-transport-https', 'build-essential', 'ca-certificates', 'curl', 'git', 'python-pip']
+    state: latest
+    install_recommends: no
+    update_cache: yes
+
+- name: Update pip
+  tags: always
+  become: yes
+  pip:
+    name: ['pip']
+    state: latest
+
+- name: Install dos2unix
+  tags: always
+  become: yes
+  apt:
+    name: dos2unix
+    state: latest
+    update_cache: yes
+
+# - name: 'Install Python'
+#   raw: sudo apt-get update; sudo apt-get install python3

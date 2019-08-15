@@ -1,0 +1,555 @@
+{
+    "alpine": {
+        "a_total": 79,
+        "d_total": 77,
+        "ad_total": 156,
+        "lga_erp": 12109,
+        "crime_ratio": 0.012882979601948964
+    },
+    "ararat": {
+        "a_total": 263,
+        "d_total": 177,
+        "ad_total": 440,
+        "lga_erp": 11335,
+        "crime_ratio": 0.0388178209086899
+    },
+    "ballarat": {
+        "a_total": 1702,
+        "d_total": 563,
+        "ad_total": 2265,
+        "lga_erp": 96935,
+        "crime_ratio": 0.02336617320885129
+    },
+    "banyule": {
+        "a_total": 1204,
+        "d_total": 314,
+        "ad_total": 1518,
+        "lga_erp": 123600,
+        "crime_ratio": 0.012281553398058252
+    },
+    "bass coast": {
+        "a_total": 443,
+        "d_total": 198,
+        "ad_total": 641,
+        "lga_erp": 30616,
+        "crime_ratio": 0.020936765090148943
+    },
+    "baw baw": {
+        "a_total": 514,
+        "d_total": 234,
+        "ad_total": 748,
+        "lga_erp": 44296,
+        "crime_ratio": 0.016886400577930286
+    },
+    "bayside": {
+        "a_total": 422,
+        "d_total": 167,
+        "ad_total": 589,
+        "lga_erp": 96992,
+        "crime_ratio": 0.00607266578686902
+    },
+    "benalla": {
+        "a_total": 185,
+        "d_total": 90,
+        "ad_total": 275,
+        "lga_erp": 13731,
+        "crime_ratio": 0.0200276746049086
+    },
+    "boroondara": {
+        "a_total": 666,
+        "d_total": 368,
+        "ad_total": 1034,
+        "lga_erp": 168458,
+        "crime_ratio": 0.006138028470004392
+    },
+    "brimbank": {
+        "a_total": 2385,
+        "d_total": 842,
+        "ad_total": 3227,
+        "lga_erp": 193334,
+        "crime_ratio": 0.01669132175406292
+    },
+    "buloke": {
+        "a_total": 51,
+        "d_total": 51,
+        "ad_total": 102,
+        "lga_erp": 6355,
+        "crime_ratio": 0.016050354051927618
+    },
+    "campaspe": {
+        "a_total": 333,
+        "d_total": 310,
+        "ad_total": 643,
+        "lga_erp": 36967,
+        "crime_ratio": 0.01739389184948738
+    },
+    "cardinia": {
+        "a_total": 903,
+        "d_total": 321,
+        "ad_total": 1224,
+        "lga_erp": 80188,
+        "crime_ratio": 0.015264129296154038
+    },
+    "casey": {
+        "a_total": 2793,
+        "d_total": 780,
+        "ad_total": 3573,
+        "lga_erp": 267640,
+        "crime_ratio": 0.013350022418173665
+    },
+    "central goldfields": {
+        "a_total": 177,
+        "d_total": 111,
+        "ad_total": 288,
+        "lga_erp": 12581,
+        "crime_ratio": 0.022891662030045307
+    },
+    "colac-otway": {
+        "a_total": 305,
+        "d_total": 188,
+        "ad_total": 493,
+        "lga_erp": 20767,
+        "crime_ratio": 0.02373958684451293
+    },
+    "corangamite": {
+        "a_total": 113,
+        "d_total": 51,
+        "ad_total": 164,
+        "lga_erp": 16387,
+        "crime_ratio": 0.010007933117715261
+    },
+    "darebin": {
+        "a_total": 1396,
+        "d_total": 535,
+        "ad_total": 1931,
+        "lga_erp": 144641,
+        "crime_ratio": 0.01335029486798349
+    },
+    "east gippsland": {
+        "a_total": 588,
+        "d_total": 334,
+        "ad_total": 922,
+        "lga_erp": 43160,
+        "crime_ratio": 0.021362372567191843
+    },
+    "frankston": {
+        "a_total": 1982,
+        "d_total": 1438,
+        "ad_total": 3420,
+        "lga_erp": 131754,
+        "crime_ratio": 0.025957466186984836
+    },
+    "gannawarra": {
+        "a_total": 105,
+        "d_total": 82,
+        "ad_total": 187,
+        "lga_erp": 10376,
+        "crime_ratio": 0.018022359290670777
+    },
+    "golden plains": {
+        "a_total": 71,
+        "d_total": 15,
+        "ad_total": 86,
+        "lga_erp": 19470,
+        "crime_ratio": 0.004417051874678993
+    },
+    "greater bendigo": {
+        "a_total": 1187,
+        "d_total": 670,
+        "ad_total": 1857,
+        "lga_erp": 103605,
+        "crime_ratio": 0.017923845374258
+    },
+    "greater dandenong": {
+        "a_total": 2399,
+        "d_total": 1523,
+        "ad_total": 3922,
+        "lga_erp": 144312,
+        "crime_ratio": 0.0271772271190199
+    },
+    "greater geelong": {
+        "a_total": 2086,
+        "d_total": 1164,
+        "ad_total": 3250,
+        "lga_erp": 218125,
+        "crime_ratio": 0.01489971346704871
+    },
+    "greater shepparton": {
+        "a_total": 885,
+        "d_total": 682,
+        "ad_total": 1567,
+        "lga_erp": 62379,
+        "crime_ratio": 0.025120633546546114
+    },
+    "hepburn": {
+        "a_total": 103,
+        "d_total": 48,
+        "ad_total": 151,
+        "lga_erp": 14728,
+        "crime_ratio": 0.010252580119500272
+    },
+    "hindmarsh": {
+        "a_total": 42,
+        "d_total": 39,
+        "ad_total": 81,
+        "lga_erp": 5781,
+        "crime_ratio": 0.01401141670991178
+    },
+    "hobsons bay": {
+        "a_total": 797,
+        "d_total": 420,
+        "ad_total": 1217,
+        "lga_erp": 88275,
+        "crime_ratio": 0.013786462758425376
+    },
+    "horsham": {
+        "a_total": 478,
+        "d_total": 275,
+        "ad_total": 753,
+        "lga_erp": 19631,
+        "crime_ratio": 0.038357699556823395
+    },
+    "hume": {
+        "a_total": 2597,
+        "d_total": 858,
+        "ad_total": 3455,
+        "lga_erp": 178034,
+        "crime_ratio": 0.019406405518047114
+    },
+    "indigo": {
+        "a_total": 74,
+        "d_total": 85,
+        "ad_total": 159,
+        "lga_erp": 15373,
+        "crime_ratio": 0.010342808820659598
+    },
+    "kingston": {
+        "a_total": 1289,
+        "d_total": 609,
+        "ad_total": 1898,
+        "lga_erp": 150014,
+        "crime_ratio": 0.012652152465769862
+    },
+    "knox": {
+        "a_total": 1221,
+        "d_total": 488,
+        "ad_total": 1709,
+        "lga_erp": 154583,
+        "crime_ratio": 0.011055549445928724
+    },
+    "latrobe": {
+        "a_total": 2065,
+        "d_total": 759,
+        "ad_total": 2824,
+        "lga_erp": 74001,
+        "crime_ratio": 0.03816164646423697
+    },
+    "loddon": {
+        "a_total": 106,
+        "d_total": 27,
+        "ad_total": 133,
+        "lga_erp": 7506,
+        "crime_ratio": 0.01771915800692779
+    },
+    "macedon ranges": {
+        "a_total": 239,
+        "d_total": 119,
+        "ad_total": 358,
+        "lga_erp": 43517,
+        "crime_ratio": 0.008226670036997036
+    },
+    "manningham": {
+        "a_total": 513,
+        "d_total": 167,
+        "ad_total": 680,
+        "lga_erp": 117036,
+        "crime_ratio": 0.005810178064868929
+    },
+    "glen eira": {
+        "a_total": 626,
+        "d_total": 212,
+        "ad_total": 838,
+        "lga_erp": 139242,
+        "crime_ratio": 0.006018299076428089
+    },
+    "glenelg": {
+        "a_total": 193,
+        "d_total": 138,
+        "ad_total": 331,
+        "lga_erp": 19758,
+        "crime_ratio": 0.01675270776394372
+    },
+    "mansfield": {
+        "a_total": 66,
+        "d_total": 53,
+        "ad_total": 119,
+        "lga_erp": 8052,
+        "crime_ratio": 0.014778936910084452
+    },
+    "maribyrnong": {
+        "a_total": 945,
+        "d_total": 614,
+        "ad_total": 1559,
+        "lga_erp": 76866,
+        "crime_ratio": 0.02028204928056618
+    },
+    "maroondah": {
+        "a_total": 913,
+        "d_total": 368,
+        "ad_total": 1281,
+        "lga_erp": 108168,
+        "crime_ratio": 0.011842689150210783
+    },
+    "melbourne": {
+        "a_total": 3567,
+        "d_total": 5890,
+        "ad_total": 9457,
+        "lga_erp": 105418,
+        "crime_ratio": 0.08970953727067484
+    },
+    "melton": {
+        "a_total": 1368,
+        "d_total": 449,
+        "ad_total": 1817,
+        "lga_erp": 117881,
+        "crime_ratio": 0.015413849560149642
+    },
+    "mildura": {
+        "a_total": 858,
+        "d_total": 750,
+        "ad_total": 1608,
+        "lga_erp": 52197,
+        "crime_ratio": 0.03080636818207943
+    },
+    "mitchell": {
+        "a_total": 559,
+        "d_total": 325,
+        "ad_total": 884,
+        "lga_erp": 36143,
+        "crime_ratio": 0.024458401350192293
+    },
+    "moira": {
+        "a_total": 197,
+        "d_total": 167,
+        "ad_total": 364,
+        "lga_erp": 28647,
+        "crime_ratio": 0.012706391594233254
+    },
+    "monash": {
+        "a_total": 1032,
+        "d_total": 288,
+        "ad_total": 1320,
+        "lga_erp": 179931,
+        "crime_ratio": 0.007336145522450273
+    },
+    "moonee valley": {
+        "a_total": 996,
+        "d_total": 493,
+        "ad_total": 1489,
+        "lga_erp": 113513,
+        "crime_ratio": 0.013117440293182278
+    },
+    "moorabool": {
+        "a_total": 211,
+        "d_total": 95,
+        "ad_total": 306,
+        "lga_erp": 29347,
+        "crime_ratio": 0.010426960166286163
+    },
+    "moreland": {
+        "a_total": 1516,
+        "d_total": 519,
+        "ad_total": 2035,
+        "lga_erp": 156657,
+        "crime_ratio": 0.012990163222837154
+    },
+    "mornington peninsula": {
+        "a_total": 1336,
+        "d_total": 894,
+        "ad_total": 2230,
+        "lga_erp": 150830,
+        "crime_ratio": 0.01478485712391434
+    },
+    "mount alexander": {
+        "a_total": 200,
+        "d_total": 91,
+        "ad_total": 291,
+        "lga_erp": 17896,
+        "crime_ratio": 0.016260616897630756
+    },
+    "moyne": {
+        "a_total": 298,
+        "d_total": 155,
+        "ad_total": 453,
+        "lga_erp": 16226,
+        "crime_ratio": 0.027918156045852335
+    },
+    "murrindindi": {
+        "a_total": 117,
+        "d_total": 97,
+        "ad_total": 214,
+        "lga_erp": 13423,
+        "crime_ratio": 0.01594278477240557
+    },
+    "nillumbik": {
+        "a_total": 386,
+        "d_total": 111,
+        "ad_total": 497,
+        "lga_erp": 62751,
+        "crime_ratio": 0.007920192506892321
+    },
+    "northern grampians": {
+        "a_total": 224,
+        "d_total": 128,
+        "ad_total": 352,
+        "lga_erp": 11945,
+        "crime_ratio": 0.029468396818752615
+    },
+    "port phillip": {
+        "a_total": 1476,
+        "d_total": 1269,
+        "ad_total": 2745,
+        "lga_erp": 100394,
+        "crime_ratio": 0.027342271450485088
+    },
+    "pyrenees": {
+        "a_total": 50,
+        "d_total": 16,
+        "ad_total": 66,
+        "lga_erp": 6746,
+        "crime_ratio": 0.009783575452119775
+    },
+    "queenscliffe": {
+        "a_total": 12,
+        "d_total": 9,
+        "ad_total": 21,
+        "lga_erp": 3085,
+        "crime_ratio": 0.006807131280388979
+    },
+    "south gippsland": {
+        "a_total": 206,
+        "d_total": 154,
+        "ad_total": 360,
+        "lga_erp": 27756,
+        "crime_ratio": 0.01297016861219196
+    },
+    "southern grampians": {
+        "a_total": 180,
+        "d_total": 180,
+        "ad_total": 360,
+        "lga_erp": 16372,
+        "crime_ratio": 0.021988761299780113
+    },
+    "stonnington": {
+        "a_total": 1015,
+        "d_total": 859,
+        "ad_total": 1874,
+        "lga_erp": 101187,
+        "crime_ratio": 0.018520165633925306
+    },
+    "strathbogie": {
+        "a_total": 80,
+        "d_total": 40,
+        "ad_total": 120,
+        "lga_erp": 9666,
+        "crime_ratio": 0.012414649286157667
+    },
+    "surf coast": {
+        "a_total": 131,
+        "d_total": 153,
+        "ad_total": 284,
+        "lga_erp": 27474,
+        "crime_ratio": 0.010337045934337919
+    },
+    "swan hill": {
+        "a_total": 423,
+        "d_total": 237,
+        "ad_total": 660,
+        "lga_erp": 20950,
+        "crime_ratio": 0.031503579952267304
+    },
+    "towong": {
+        "a_total": 62,
+        "d_total": 50,
+        "ad_total": 112,
+        "lga_erp": 5910,
+        "crime_ratio": 0.01895093062605753
+    },
+    "wangaratta": {
+        "a_total": 407,
+        "d_total": 437,
+        "ad_total": 844,
+        "lga_erp": 27221,
+        "crime_ratio": 0.031005473715146396
+    },
+    "warrnambool": {
+        "a_total": 319,
+        "d_total": 207,
+        "ad_total": 526,
+        "lga_erp": 33004,
+        "crime_ratio": 0.015937462125802934
+    },
+    "wellington": {
+        "a_total": 790,
+        "d_total": 308,
+        "ad_total": 1098,
+        "lga_erp": 42294,
+        "crime_ratio": 0.025961129238189815
+    },
+    "west wimmera": {
+        "a_total": 42,
+        "d_total": 20,
+        "ad_total": 62,
+        "lga_erp": 4195,
+        "crime_ratio": 0.014779499404052444
+    },
+    "whitehorse": {
+        "a_total": 841,
+        "d_total": 302,
+        "ad_total": 1143,
+        "lga_erp": 159296,
+        "crime_ratio": 0.007175321414222579
+    },
+    "whittlesea": {
+        "a_total": 1740,
+        "d_total": 481,
+        "ad_total": 2221,
+        "lga_erp": 169955,
+        "crime_ratio": 0.01306816510252714
+    },
+    "wodonga": {
+        "a_total": 469,
+        "d_total": 294,
+        "ad_total": 763,
+        "lga_erp": 36576,
+        "crime_ratio": 0.020860673665791776
+    },
+    "wyndham": {
+        "a_total": 1404,
+        "d_total": 687,
+        "ad_total": 2091,
+        "lga_erp": 178859,
+        "crime_ratio": 0.011690773178872743
+    },
+    "yarra": {
+        "a_total": 1140,
+        "d_total": 1088,
+        "ad_total": 2228,
+        "lga_erp": 80987,
+        "crime_ratio": 0.02751058811908084
+    },
+    "yarra ranges": {
+        "a_total": 974,
+        "d_total": 418,
+        "ad_total": 1392,
+        "lga_erp": 149235,
+        "crime_ratio": 0.00932757061011157
+    },
+    "yarriambiack": {
+        "a_total": 78,
+        "d_total": 73,
+        "ad_total": 151,
+        "lga_erp": 7102,
+        "crime_ratio": 0.021261616446071527
+    }
+}

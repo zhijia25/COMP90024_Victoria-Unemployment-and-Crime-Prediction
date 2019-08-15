@@ -1,0 +1,8 @@
+[Webserver]
+172.26.37.33
+[CouchDB_master]
+172.26.38.189
+[CouchDB_slave1]
+172.26.37.222
+[CouchDB_slave2]
+172.26.37.223

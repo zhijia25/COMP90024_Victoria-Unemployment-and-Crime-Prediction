@@ -1,0 +1,50 @@
+#This file is developed by Team 11 of COMP90024 of The University of Melbourne, under Apache Licence(see LICENCE).
+#Researched Cities: Victoria, AU
+#Team member - id:
+#Zhijia Lu         921715
+#Jing Du           775074
+#Chenyang Lu       951933
+#Pengcheng Yao     886326
+#Echo Gu           520042
+
+- hosts: Webserver
+  gather_facts: false
+
+  tasks:
+
+    - name: pull images from docker hub
+      raw: docker pull yaopc817/team11_website
+
+    - name: run container by using website images
+      raw: docker run -d --net=host --name website yaopc817/team11_website
+
+    - name: Install nginx
+      become: yes
+      apt:
+        name: ['nginx']
+        state: latest
+        install_recommends: no
+        update_cache: yes
+
+    - name: copy the team11.conf
+      become: yes
+      copy:
+        src: /home/andy/comp90024/Ansible/website/team11.conf
+        dest: /etc/nginx/conf.d/team11.conf
+
+    - name: mkdir repo
+      raw: mkdir /opt/workspace/webserver
+    
+    - name: git pull server code
+      # become: yes
+      git:
+        repo: 'git clone https://zhijial@bitbucket.org/zhijial/vuc-prediction-flaskserver_final.git'
+        dest: /opt/workspace/webserver
+        clone: yes
+
+    - name: build server container
+      raw: cd /opt/workspace/webserver; docker build -t server:1.0.0 .; sleep 5
+
+    - name: run harvest1 container
+      raw: docker run -d --net=host server:1.0.0
+

@@ -1,0 +1,39 @@
+#This file is developed by Team 11 of COMP90024 of The University of Melbourne, under Apache Licence(see LICENCE).
+#Researched Cities: Victoria, AU
+#Team member - id:
+#Zhijia Lu         921715
+#Jing Du           775074
+#Chenyang Lu       951933
+#Pengcheng Yao     886326
+#Echo Gu           520042
+
+- name: mkdir the /opt/workspace/slave/data
+  become: true
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: ubuntu
+    group: ubuntu
+  with_items:
+    - /opt/workspace/slave/data
+
+- name: copy the docker-compose
+  become: true
+  copy:
+    src: /home/andy/comp90024/Ansible/couchdb/docker-compose-s2.yml
+    dest: /opt/workspace/slave/docker-compose.yml
+
+- name: run CouchDB_master
+  raw: cd /opt/workspace/slave/; docker-compose up -d
+
+- name: copy the cluster.sh
+  become: true
+  copy:
+    src: /home/andy/comp90024/Ansible/couchdb/cluster2.sh
+    dest: /opt/workspace/slave/cluster.sh
+
+- name: change the type of cluster.sh
+  raw:  cd /home/ubuntu/couchdb/slave/; sudo dos2unix cluster.sh
+
+- name: run cluster.sh
+  shell: /home/ubuntu/couchdb/slave/cluster.sh

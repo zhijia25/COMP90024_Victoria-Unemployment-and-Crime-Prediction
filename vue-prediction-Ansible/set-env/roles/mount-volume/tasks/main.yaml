@@ -1,0 +1,38 @@
+#This file is developed by Team 11 of COMP90024 of The University of Melbourne, under Apache Licence(see LICENCE).
+#Researched Cities: Victoria, AU
+#Team member - id:
+#Zhijia Lu         921715
+#Jing Du           775074
+#Chenyang Lu       951933
+#Pengcheng Yao     886326
+#Echo Gu           520042
+
+# directory related
+# 1. mount the volume on the directory
+   - name: mkdir the mount point
+     become: yes
+     shell: |
+       mkfs.ext4 /dev/vdb
+       sudo mount /dev/vdb /opt
+       sleep 3
+  #  - name: change owner of directory to ubuntu
+  #    become: true
+    #  command: chown -R ubuntu:ubuntu /opt/workspace
+# 2. make volume auto mout
+   - name: autuo mount volume
+     become: yes
+     lineinfile:
+       dest: /etc/fstab
+       line: "/dev/vdb    /opt    ext4    defaults    0    1"
+       state: present
+# 3. mkdir the workspace
+   - name: mkdir the /opt/workspace
+     become: yes
+     file:
+       path: "{{ item }}"
+       state: directory
+       owner: ubuntu
+       group: ubuntu
+       mode: 0755
+     with_items:
+      - /opt/workspace

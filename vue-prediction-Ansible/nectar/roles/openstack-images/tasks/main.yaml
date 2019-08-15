@@ -1,0 +1,22 @@
+#This file is developed by Team 11 of COMP90024 of The University of Melbourne, under Apache Licence(see LICENCE).
+#Researched Cities: Victoria, AU
+#Team member - id:
+#Zhijia Lu         921715
+#Jing Du           775074
+#Chenyang Lu       951933
+#Pengcheng Yao     886326
+#Echo Gu           520042
+
+- name: Receive all available openstack images
+  os_image_facts:
+
+- name: Get image names and ids
+  set_fact:
+    image_facts: "{{ image_facts|default([]) + [{'name': item.name, 'id': item.id}] }}"
+  loop: '{{ openstack_image }}'
+  when: item.name is defined
+
+- name: Show images
+  debug:
+    msg: "Image name: {{ item.name }}; Image id: {{ item.id }}"
+  loop: '{{ image_facts }}'

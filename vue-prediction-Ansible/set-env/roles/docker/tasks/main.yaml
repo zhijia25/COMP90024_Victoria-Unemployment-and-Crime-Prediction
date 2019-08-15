@@ -1,0 +1,66 @@
+#This file is developed by Team 11 of COMP90024 of The University of Melbourne, under Apache Licence(see LICENCE).
+#Researched Cities: Victoria, AU
+#Team member - id:
+#Zhijia Lu         921715
+#Jing Du           775074
+#Chenyang Lu       951933
+#Pengcheng Yao     886326
+#Echo Gu           520042
+
+- name: Uninstall old version of docker
+  tags: 'docker'
+  become: yes
+  apt:
+    name: ['docker', 'docker-engine', 'docker.io']
+    state: absent
+
+- name: Install dependencies
+  tags: 'docker'
+  become: yes
+  apt:
+    name: ['apt-transport-https', 'ca-certificates', 'curl', 'python-setuptools', 'software-properties-common']
+    state: latest
+    install_recommends: no
+    update_cache: yes
+
+- name: Add Docker apt repository key
+  tags: 'docker'
+  become: yes
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+- name: Add Docker apt repository and update apt update-cache
+  raw: sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu artful stable"; sudo apt-get update
+
+- name: Install docker
+  tags: 'docker'
+  become: yes
+  apt:
+    name: ['docker-ce']
+    state: latest
+    install_recommends: no
+    update_cache: yes
+
+- name: Set docker environment
+  tags: 'docker'
+  become: yes
+  lineinfile:
+    path: /etc/systemd/system/docker.service.d/http-proxy.conf
+    line: "[Service]\nEnvironment=http_proxy=http://wwwproxy.unimelb.edu.au:8000\nEnvironment=http_proxys=https://http://wwwproxy.unimelb.edu.au:8000"
+    state: present
+    create: yes
+
+- name: Restart docker service
+  raw: sudo systemctl daemon-reload; sudo systemctl restart docker
+
+- name: Reset sudo to user
+  raw: sudo usermod -a -G docker $USER
+
+- name: Install docker-compose
+  tags: 'docker'
+  become: yes
+  pip:
+    name: ['docker-compose']
+    version: 1.22.0
+    state: present

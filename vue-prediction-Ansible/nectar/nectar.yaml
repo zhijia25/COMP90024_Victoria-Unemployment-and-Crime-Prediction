@@ -1,0 +1,58 @@
+#This file is developed by Team 11 of COMP90024 of The University of Melbourne, under Apache Licence(see LICENCE).
+#Researched Cities: Victoria, AU
+#Team member - id:
+#Zhijia Lu         921715
+#Jing Du           775074
+#Chenyang Lu       951933
+#Pengcheng Yao     886326
+#Echo Gu           520042
+
+- hosts: localhost
+  vars_files:
+    - host_vars/nectar.yaml
+  gather_facts: true
+
+  roles:
+    - role: openstack-common
+    - role: openstack-images
+    - role: openstack-volume
+    - role: openstack-security-group
+    - role: openstack-instance
+    - role: openstack-volume-snapshot
+
+  tasks:
+    - name: Update host file
+      become: yes
+      lineinfile:
+        dest: /comp90024/Ansible/set-env/hosts
+        line: "[Webserver]\n{{ os_instance1.openstack.public_v4  }}[CouchDB_master]\n{{ os_instance2.openstack.public_v4  }}\n[CouchDB_slave1]\n{{ os_instance3.openstack.public_v4  }}\n[CouchDB_slave2]\n{{ os_instance4.openstack.public_v4  }}"
+        mode: 0777
+        create: yes
+        state: present
+
+    - name: Update host file
+      become: yes
+      lineinfile:
+        dest: /comp90024/Ansible/website/hosts
+        line: "[Webserver]\n{{ os_instance1.openstack.public_v4  }}[CouchDB_master]\n{{ os_instance2.openstack.public_v4  }}\n[CouchDB_slave1]\n{{ os_instance3.openstack.public_v4  }}\n[CouchDB_slave2]\n{{ os_instance4.openstack.public_v4  }}"
+        mode: 0777
+        create: yes
+        state: present
+
+    - name: Update host file
+      become: yes
+      lineinfile:
+        dest: /comp90024/Ansible/couchdb/hosts
+        line: "[Webserver]\n{{ os_instance1.openstack.public_v4  }}[CouchDB_master]\n{{ os_instance2.openstack.public_v4  }}\n[CouchDB_slave1]\n{{ os_instance3.openstack.public_v4  }}\n[CouchDB_slave2]\n{{ os_instance4.openstack.public_v4  }}"
+        mode: 0777
+        create: yes
+        state: present
+
+    - name: Update host file
+      become: yes
+      lineinfile:
+        dest: /comp90024/Ansible/applications/hosts
+        line: "[Webserver]\n{{ os_instance1.openstack.public_v4  }}[CouchDB_master]\n{{ os_instance2.openstack.public_v4  }}\n[CouchDB_slave1]\n{{ os_instance3.openstack.public_v4  }}\n[CouchDB_slave2]\n{{ os_instance4.openstack.public_v4  }}"
+        mode: 0777
+        create: yes
+        state: present

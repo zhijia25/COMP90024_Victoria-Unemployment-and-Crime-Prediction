@@ -1,0 +1,1 @@
+. ./unimelb-comp90024-group-11-openrc.sh; ansible-playbook -i hosts -u ubuntu --key-file=~/.ssh/team11.pem set-website.yaml

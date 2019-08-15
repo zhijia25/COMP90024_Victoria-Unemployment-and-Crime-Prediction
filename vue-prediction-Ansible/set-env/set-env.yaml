@@ -1,0 +1,17 @@
+#This file is developed by Team 11 of COMP90024 of The University of Melbourne, under Apache Licence(see LICENCE).
+#Researched Cities: Victoria, AU
+#Team member - id:
+#Zhijia Lu         921715
+#Jing Du           775074
+#Chenyang Lu       951933
+#Pengcheng Yao     886326
+#Echo Gu           520042
+
+- hosts: all
+  gather_facts: false
+
+  roles:
+    - role: set-proxy
+    - role: common
+    - role: docker
+    - role: mount-volume
